@@ -1,0 +1,16 @@
+%define lookup-function-name lookupGeneratedInit
+%define class-name AudioDuckBindings
+%{
+
+#include <string.h>
+#include <v8.h>
+#include <KrollBindings.h>
+
+#include "android.duck.audio.AudioDuckModule.h"
+
+
+%}
+struct titanium::bindings::BindEntry;
+%%
+android.duck.audio.AudioDuckModule, ::android::duck::audio::AudioDuckModule::bindProxy, ::android::duck::audio::AudioDuckModule::dispose
+%%
