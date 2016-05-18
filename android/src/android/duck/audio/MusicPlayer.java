@@ -91,9 +91,7 @@ public class MusicPlayer {
 	public void play(String audioUrl) {
         try {
             Uri audioUri = Uri.parse(audioUrl);
-            if (mPlayer == null) {
-                mPlayer = MediaPlayer.create(TiApplication.getAppCurrentActivity().getApplicationContext(), audioUri);
-            }
+            mPlayer = MediaPlayer.create(TiApplication.getAppCurrentActivity().getApplicationContext(), audioUri);
 
             if (requestAudioFocus()) {
                 setupBroadcastReceiver();
